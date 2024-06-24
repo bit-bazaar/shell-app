@@ -7,8 +7,8 @@ import {
 const netlifyConfig: NetlifyOptions = {
   team: 'teambit',
   accessToken: process.env.NETLIFY_AUTH_TOKEN as string,
-  productionSiteName: 'bit-bazaar-shell',
-  stagingSiteName: 'bit-bazaar-shell',
+  productionSiteName: 'bit-bazaar',
+  stagingSiteName: 'bit-bazaar',
   skipLaneDeployments: false,
   useDefaultRedirectsForSPA: true,
 };
