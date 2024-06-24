@@ -78,5 +78,6 @@
   "teambit.workspace/workspace-config-files": {
     "enableWorkspaceConfigWrite": true
   },
-  "bit-bazaar.shell-app/shell-app": {}
+  "bit-bazaar.shell-app/shell-app": {},
+  "bit-bazaar.shell-app/shell-platform": {}
 }

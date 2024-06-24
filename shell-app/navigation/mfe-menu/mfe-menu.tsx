@@ -2,9 +2,8 @@ import { useState, createElement } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@bit-bazaar/design.actions.button';
 import { Menu, MenuItem } from '@bit-bazaar/design.navigation.menu';
-// import ExpandMore from '@mui/icons-material/ExpandMore.js';
-// import ExpandLess from '@mui/icons-material/ExpandLess.js';
 import type { NavItem } from '@bit-bazaar/shell-app.types.navigation';
+import { ExpandMore, ExpandLess } from '@mui/icons-material';
 
 export type MfeMenuProps = {
   /**
@@ -32,7 +31,7 @@ export function MfeMenu({ item }: MfeMenuProps) {
         <>
           <Button
             onClick={handleToggle}
-            endIcon={isOpen ? '∧' : '∨'}
+            endIcon={isOpen ? <ExpandLess /> : <ExpandMore />}
             variant="text"
             sx={{ color: 'white' }}
             startIcon={item.icon ? createElement(item.icon) : null}

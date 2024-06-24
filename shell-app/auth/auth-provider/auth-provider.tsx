@@ -9,20 +9,16 @@ export type AuthProviderProps = {
   children?: ReactNode;
 };
 
-// Create a context with an undefined default value
 const AuthContext = createContext<any>(undefined);
 
-const AuthContextProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+const AuthContextProvider: React.FC<{ children: ReactNode }> = ({
+  children,
+}) => {
   const auth0 = useAuth0();
 
-  return (
-    <AuthContext.Provider value={auth0}>
-      {children}
-    </AuthContext.Provider>
-  );
+  return <AuthContext.Provider value={auth0}>{children}</AuthContext.Provider>;
 };
 
-// Custom hook to use the AuthContext
 export function useAuth() {
   const context = useContext(AuthContext);
   if (context === undefined) {
@@ -31,7 +27,6 @@ export function useAuth() {
   return context;
 }
 
-// Main AuthProvider component
 export function AuthProvider({ children }: AuthProviderProps) {
   const domain = 'dev-recnwmxdyhuu7o4o.us.auth0.com';
   const clientId = 'p8tBZWYCqzVoREVZduWDX3TDgKKZEfW2';
@@ -44,9 +39,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
         redirect_uri: window.location.origin,
       }}
     >
-      <AuthContextProvider>
-        {children}
-      </AuthContextProvider>
+      <AuthContextProvider>{children}</AuthContextProvider>
     </Auth0Provider>
   );
 }

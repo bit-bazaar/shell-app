@@ -40,6 +40,10 @@ export default MfReact.from({
         },
         '@emotion/react': {
           singleton: true,
+          requiredVersion: '11.11.5',
+        },
+        '@emotion/styled': {
+          singleton: true,
           requiredVersion: '11.11.4',
         },
         '@bit-bazaar/design.navigation.navbar-item': {
@@ -47,6 +51,26 @@ export default MfReact.from({
           requiredVersion: '*',
         },
         '@bit-bazaar/design.navigation.navbar': {
+          singleton: true,
+          requiredVersion: '*',
+        },
+        '@bit-bazaar/design.data-display.avatar': {
+          singleton: true,
+          requiredVersion: '*',
+        },
+        '@bit-bazaar/design.layout.box': {
+          singleton: true,
+          requiredVersion: '*',
+        },
+        '@bit-bazaar/design.layout.toolbar': {
+          singleton: true,
+          requiredVersion: '*',
+        },
+        '@bit-bazaar/design.layout.container': {
+          singleton: true,
+          requiredVersion: '*',
+        },
+        '@bit-bazaar/design.navigation.menu': {
           singleton: true,
           requiredVersion: '*',
         },
