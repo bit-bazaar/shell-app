@@ -68,7 +68,6 @@
         "@bit-bazaar/design.surfaces.app-bar": "^0.0.3",
         "@bit-bazaar/design.theme.theme-provider": "^0.0.2",
         "@bit-bazaar/design.typography.typography": "^0.0.2",
-        "@bit-bazaar/shell-app.types.navigation": "^0.0.2",
         "@mui/icons-material": "^5.15.20"
       },
       "peerDependencies": {}

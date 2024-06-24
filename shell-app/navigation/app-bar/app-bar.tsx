@@ -1,11 +1,9 @@
 import React, { type ReactNode } from 'react';
-import { Link } from 'react-router-dom';
 import { Avatar } from '@bit-bazaar/design.data-display.avatar';
 import { Box } from '@bit-bazaar/design.layout.box';
 import { AppBar as BaseAppBar } from '@bit-bazaar/design.surfaces.app-bar';
 import { Toolbar } from '@bit-bazaar/design.layout.toolbar';
 import { Menu, MenuItem } from '@bit-bazaar/design.navigation.menu';
-import { Typography } from '@bit-bazaar/design.typography.typography';
 import { IconButton } from '@bit-bazaar/design.actions.icon-button';
 
 export type AppBarProps = {
@@ -17,11 +15,6 @@ export type AppBarProps = {
 
 export function AppBar({ elements }: AppBarProps) {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
-
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    // setAuth(event.target.checked);
-    console.log(event.target.checked);
-  };
 
   const handleMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);

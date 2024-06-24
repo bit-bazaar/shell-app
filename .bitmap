@@ -25,66 +25,17 @@
     },
     "navigation/app-bar": {
         "name": "navigation/app-bar",
-        "scope": "",
-        "version": "",
-        "defaultScope": "bit-bazaar.shell-app",
+        "scope": "bit-bazaar.shell-app",
+        "version": "0.0.1",
         "mainFile": "index.ts",
-        "rootDir": "shell-app/navigation/app-bar",
-        "config": {
-            "bit-bazaar.design/dev/react-mui@0.0.3": {},
-            "teambit.envs/envs": {
-                "env": "bit-bazaar.design/dev/react-mui"
-            },
-            "teambit.dependencies/dependency-resolver": {},
-            "teambit.component/dev-files": {},
-            "teambit.semantics/schema": {},
-            "teambit.preview/preview": {},
-            "teambit.compositions/compositions": {},
-            "teambit.docs/docs": {},
-            "teambit.pipelines/builder": {},
-            "teambit.component/forking": {
-                "forkedFrom": {
-                    "scope": "bit-bazaar.design",
-                    "name": "navigation/navbar",
-                    "version": "0.0.1"
-                }
-            }
-        }
+        "rootDir": "shell-app/navigation/app-bar"
     },
     "navigation/mfe-menu": {
         "name": "navigation/mfe-menu",
-        "scope": "",
-        "version": "",
-        "defaultScope": "bit-bazaar.shell-app",
-        "mainFile": "index.ts",
-        "rootDir": "shell-app/navigation/mfe-menu",
-        "config": {
-            "bit-bazaar.design/dev/react-mui@0.0.3": {},
-            "teambit.envs/envs": {
-                "env": "bit-bazaar.design/dev/react-mui"
-            },
-            "teambit.dependencies/dependency-resolver": {},
-            "teambit.component/dev-files": {},
-            "teambit.semantics/schema": {},
-            "teambit.preview/preview": {},
-            "teambit.compositions/compositions": {},
-            "teambit.docs/docs": {},
-            "teambit.pipelines/builder": {},
-            "teambit.component/forking": {
-                "forkedFrom": {
-                    "scope": "bit-bazaar.design",
-                    "name": "navigation/navbar-item",
-                    "version": "0.0.1"
-                }
-            }
-        }
-    },
-    "navigation/nav-items": {
-        "name": "navigation/nav-items",
         "scope": "bit-bazaar.shell-app",
-        "version": "0.0.3",
+        "version": "0.0.1",
         "mainFile": "index.ts",
-        "rootDir": "shell-app/navigation/nav-items"
+        "rootDir": "shell-app/navigation/mfe-menu"
     },
     "remote-modules": {
         "name": "remote-modules",
@@ -96,14 +47,14 @@
     "shell-app": {
         "name": "shell-app",
         "scope": "bit-bazaar.shell-app",
-        "version": "0.0.1",
+        "version": "0.0.3",
         "mainFile": "index.ts",
         "rootDir": "shell-app/shell-app"
     },
     "shell-platform": {
         "name": "shell-platform",
         "scope": "bit-bazaar.shell-app",
-        "version": "0.0.1",
+        "version": "0.0.3",
         "mainFile": "index.ts",
         "rootDir": "shell-app/shell-platform"
     },
