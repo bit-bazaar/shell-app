@@ -32,13 +32,14 @@
     "resolveEnvsFromRoots": true
   },
   /**
-  * Enable generator templates by uncommenting the desired environments below.
-  * These generators scaffold components for Node, React, Vue, and Angular.
-  * After uncommenting, run `bit install` to make them available in your workspace.
-  * Explore more dev environments at: https://bit.dev/docs/getting-started/composing/dev-environments
-  **/
+   * Enable generator templates by uncommenting the desired environments below.
+   * These generators scaffold components for Node, React, Vue, and Angular.
+   * After uncommenting, run `bit install` to make them available in your workspace.
+   * Explore more dev environments at: https://bit.dev/docs/getting-started/composing/dev-environments
+   **/
   "teambit.generator/generator": {
     "envs": [
+      "bit-bazaar.design/dev/react-mui"
       //  "bitdev.node/node-env",
       //  "bitdev.react/react-env",
       //  "bitdev.vue/vue-env",
@@ -53,13 +54,30 @@
      * choose the package manager for Bit to use. you can choose between 'yarn', 'pnpm'
      */
     "packageManager": "teambit.dependencies/pnpm",
-    "rootComponents": true,
     "policy": {
-      "dependencies": {},
+      "dependencies": {
+        "@bit-bazaar/design.actions.button": "^0.0.3",
+        "@bit-bazaar/design.actions.icon-button": "^0.0.3",
+        "@bit-bazaar/design.data-display.avatar": "^0.0.2",
+        "@bit-bazaar/design.dev.react-mui": "^0.0.3",
+        "@bit-bazaar/design.examples.layout.app-bar": "^0.0.2",
+        "@bit-bazaar/design.layout.box": "^0.0.2",
+        "@bit-bazaar/design.layout.container": "^0.0.2",
+        "@bit-bazaar/design.layout.toolbar": "^0.0.2",
+        "@bit-bazaar/design.navigation.menu": "^0.0.3",
+        "@bit-bazaar/design.surfaces.app-bar": "^0.0.3",
+        "@bit-bazaar/design.theme.theme-provider": "^0.0.2",
+        "@bit-bazaar/design.typography.typography": "^0.0.2",
+        "@bit-bazaar/shell-app.types.navigation": "^0.0.2",
+        "@mui/icons-material": "^5.15.20"
+      },
       "peerDependencies": {}
-    }
+    },
+    "linkCoreAspects": true,
+    "rootComponents": true
   },
   "teambit.workspace/workspace-config-files": {
     "enableWorkspaceConfigWrite": true
-  }
+  },
+  "bit-bazaar.shell-app/shell-app": {}
 }
