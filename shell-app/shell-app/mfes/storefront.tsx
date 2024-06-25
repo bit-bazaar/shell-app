@@ -12,7 +12,7 @@ export const StoreMenu = React.lazy(() =>
       }
 
       return {
-        default: () => <MfeMenu item={m.default} />,
+        default: () => <MfeMenu mfePath="store" item={m.default} />,
       };
     })
     .catch((e) => {

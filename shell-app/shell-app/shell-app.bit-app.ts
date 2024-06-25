@@ -44,7 +44,7 @@ export default MfReact.from({
         },
         '@emotion/styled': {
           singleton: true,
-          requiredVersion: '11.11.4',
+          requiredVersion: '11.11.5',
         },
         '@bit-bazaar/design.navigation.navbar-item': {
           singleton: true,
@@ -84,14 +84,12 @@ export default MfReact.from({
           ...mutator.config.devServer,
           historyApiFallback: true,
         },
-        stats: {
-          ...(typeof mutator.config.stats === 'object'
-            ? mutator.config.stats
-            : {}),
-          warnings: false,
-        },
       });
 
+      return mutator;
+    },
+    (mutator) => {
+      mutator!.config!.output!.publicPath = 'https://bit-bazaar.netlify.app/';
       return mutator;
     },
   ],

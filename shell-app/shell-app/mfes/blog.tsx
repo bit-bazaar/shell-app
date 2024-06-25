@@ -8,7 +8,7 @@ export const BlogMenu = React.lazy(() =>
   loadRemote<MenuItemImport>('blog/blognav')
     .then((m) => {
       if (!m) throw new Error('blog nav item not found');
-      return { default: () => <MfeMenu item={m.default} /> };
+      return { default: () => <MfeMenu mfePath="blog" item={m.default} /> };
     })
     .catch((e) => {
       console.error(`Error loading blog nav item`, e);

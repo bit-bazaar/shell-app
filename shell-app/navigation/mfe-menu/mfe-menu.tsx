@@ -1,5 +1,5 @@
 import { useState, createElement } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { Button } from '@bit-bazaar/design.actions.button';
 import { Menu, MenuItem } from '@bit-bazaar/design.navigation.menu';
 import type { NavItem } from '@bit-bazaar/shell-app.types.navigation';
@@ -11,9 +11,10 @@ export type MfeMenuProps = {
    * @returns
    */
   item: NavItem;
+  mfePath?: string;
 };
 
-export function MfeMenu({ item }: MfeMenuProps) {
+export function MfeMenu({ mfePath, item }: MfeMenuProps) {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const isOpen = Boolean(anchorEl);
 
@@ -43,8 +44,7 @@ export function MfeMenu({ item }: MfeMenuProps) {
               <MenuItem
                 key={child.path}
                 onClick={handleClose}
-                component={Link}
-                to={child.path}
+                to={mfePath ? `/${mfePath}${child.path}` : child.path}
               >
                 {child.label}
               </MenuItem>
@@ -53,7 +53,6 @@ export function MfeMenu({ item }: MfeMenuProps) {
         </>
       ) : (
         <Button
-          // component={Link}
           to={item.path}
           variant="text"
           color="primary"
