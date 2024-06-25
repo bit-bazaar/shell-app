@@ -54,14 +54,14 @@
     "shell-app": {
         "name": "shell-app",
         "scope": "bit-bazaar.shell-app",
-        "version": "0.0.15",
+        "version": "0.0.16",
         "mainFile": "index.ts",
         "rootDir": "shell-app/shell-app"
     },
     "shell-platform": {
         "name": "shell-platform",
         "scope": "bit-bazaar.shell-app",
-        "version": "0.0.15",
+        "version": "0.0.16",
         "mainFile": "index.ts",
         "rootDir": "shell-app/shell-platform"
     },
