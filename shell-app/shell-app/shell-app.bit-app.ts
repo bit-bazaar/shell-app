@@ -10,7 +10,7 @@ const netlifyConfig: NetlifyOptions = {
   productionSiteName: 'bit-bazaar',
   stagingSiteName: 'bit-bazaar',
   skipLaneDeployments: false,
-  useDefaultRedirectsForSPA: true,
+  useDefaultRedirectsForSPA: false,
 };
 
 export default MfReact.from({

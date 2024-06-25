@@ -1,2 +1,2 @@
-export * from './../../../../../../../../Library/Caches/Bit/capsules/3aa5e23f5/bit-bazaar.storefront_storefront@0.0.7/dist/navitem';
-export { default } from './../../../../../../../../Library/Caches/Bit/capsules/3aa5e23f5/bit-bazaar.storefront_storefront@0.0.7/dist/navitem';
+export * from './../../../../../../../../Library/Caches/Bit/capsules/3aa5e23f5/bit-bazaar.storefront_storefront@0.0.8/dist/navitem';
+export { default } from './../../../../../../../../Library/Caches/Bit/capsules/3aa5e23f5/bit-bazaar.storefront_storefront@0.0.8/dist/navitem';
