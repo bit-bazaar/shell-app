@@ -53,7 +53,7 @@ export function MfeMenu({ item }: MfeMenuProps) {
         </>
       ) : (
         <Button
-          component={Link}
+          // component={Link}
           to={item.path}
           variant="text"
           color="primary"

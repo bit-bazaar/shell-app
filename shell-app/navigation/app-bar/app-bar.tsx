@@ -23,6 +23,7 @@ export function AppBar({ elements }: AppBarProps) {
             color="inherit"
             aria-label="menu"
             sx={{ mr: 4, p: 0 }}
+            to="/"
           >
             <img
               src="https://static.bit.dev/extensions-icons/my-project.svg"

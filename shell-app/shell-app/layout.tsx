@@ -1,9 +1,10 @@
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 import { AppBar } from '@bit-bazaar/shell-app.navigation.app-bar';
-import { Box } from '@bit-bazaar/design.layout.box';
+import { Container } from '@bit-bazaar/design.layout.container';
 import { Toolbar } from '@bit-bazaar/design.layout.toolbar';
 import type { NavItem } from '@bit-bazaar/shell-app.types.navigation';
+import { Button } from '@bit-bazaar/design.actions.button';
 import { StoreMenu } from './mfes/storefront.js';
 import { BlogMenu } from './mfes/blog.js';
 
@@ -11,6 +12,12 @@ export type MenuItemImport = {
   default: NavItem;
   [key: string]: NavItem | undefined;
 };
+
+const MenuFallback = ({ mfeName }: { mfeName: string }) => (
+  <Button to={mfeName.toLowerCase()} variant="text" sx={{ color: 'white' }}>
+    {mfeName}
+  </Button>
+);
 
 export function Layout() {
   return (
@@ -20,7 +27,7 @@ export function Layout() {
           {
             name: 'store',
             component: () => (
-              <Suspense fallback={<p>...</p>}>
+              <Suspense fallback={<MenuFallback mfeName="Store" />}>
                 <StoreMenu />
               </Suspense>
             ),
@@ -28,7 +35,7 @@ export function Layout() {
           {
             name: 'blog',
             component: () => (
-              <Suspense fallback={<p>...</p>}>
+              <Suspense fallback={<MenuFallback mfeName="Blog" />}>
                 <BlogMenu />
               </Suspense>
             ),
@@ -36,10 +43,10 @@ export function Layout() {
         ]}
       />
       {/* @ts-ignore */}
-      <Box component="main" sx={{ p: 3, width: '100%' }}>
+      <Container component="main" maxWidth="lg">
         <Toolbar />
         <Outlet />
-      </Box>
+      </Container>
     </>
   );
 }

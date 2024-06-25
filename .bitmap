@@ -33,35 +33,35 @@
     "navigation/app-bar": {
         "name": "navigation/app-bar",
         "scope": "bit-bazaar.shell-app",
-        "version": "0.0.2",
+        "version": "0.0.3",
         "mainFile": "index.ts",
         "rootDir": "shell-app/navigation/app-bar"
     },
     "navigation/mfe-menu": {
         "name": "navigation/mfe-menu",
         "scope": "bit-bazaar.shell-app",
-        "version": "0.0.2",
+        "version": "0.0.3",
         "mainFile": "index.ts",
         "rootDir": "shell-app/navigation/mfe-menu"
     },
-    "remote-modules": {
-        "name": "remote-modules",
+    "pages/homepage": {
+        "name": "pages/homepage",
         "scope": "bit-bazaar.shell-app",
-        "version": "0.0.2",
+        "version": "0.0.1",
         "mainFile": "index.ts",
-        "rootDir": "shell-app/remote-modules"
+        "rootDir": "shell-app/pages/homepage"
     },
     "shell-app": {
         "name": "shell-app",
         "scope": "bit-bazaar.shell-app",
-        "version": "0.0.9",
+        "version": "0.0.10",
         "mainFile": "index.ts",
         "rootDir": "shell-app/shell-app"
     },
     "shell-platform": {
         "name": "shell-platform",
         "scope": "bit-bazaar.shell-app",
-        "version": "0.0.9",
+        "version": "0.0.10",
         "mainFile": "index.ts",
         "rootDir": "shell-app/shell-platform"
     },
@@ -71,13 +71,6 @@
         "version": "0.0.2",
         "mainFile": "index.ts",
         "rootDir": "shell-app/types/navigation"
-    },
-    "types/remote-modules": {
-        "name": "types/remote-modules",
-        "scope": "bit-bazaar.shell-app",
-        "version": "0.0.2",
-        "mainFile": "index.ts",
-        "rootDir": "shell-app/types/remote-modules"
     },
     "$schema-version": "17.0.0"
 }
