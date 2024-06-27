@@ -51,17 +51,24 @@
         "mainFile": "index.ts",
         "rootDir": "shell-app/pages/homepage"
     },
+    "shared-dependencies": {
+        "name": "shared-dependencies",
+        "scope": "bit-bazaar.shell-app",
+        "version": "0.0.3",
+        "mainFile": "index.ts",
+        "rootDir": "shell-app/shared-dependencies"
+    },
     "shell-app": {
         "name": "shell-app",
         "scope": "bit-bazaar.shell-app",
-        "version": "0.0.23",
+        "version": "0.0.24",
         "mainFile": "index.ts",
         "rootDir": "shell-app/shell-app"
     },
     "shell-platform": {
         "name": "shell-platform",
         "scope": "bit-bazaar.shell-app",
-        "version": "0.0.22",
+        "version": "0.0.23",
         "mainFile": "index.ts",
         "rootDir": "shell-app/shell-platform"
     },
