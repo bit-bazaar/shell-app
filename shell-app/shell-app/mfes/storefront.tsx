@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { type ComponentType } from 'react';
 import { loadRemote } from '@module-federation/runtime';
 import { MfeMenu } from '@bit-bazaar/shell-app.navigation.mfe-menu';
 import type { MenuItemImport } from '../layout.js';
@@ -29,7 +29,7 @@ export const Store = () => {
           throw new Error('store module not found');
         }
 
-        return { default: m.default };
+        return { default: m.Storefront as ComponentType<any> };
       })
       .catch((e) => {
         console.error(`Error loading store module`, e);

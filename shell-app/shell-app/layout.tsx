@@ -1,4 +1,4 @@
-import { Suspense } from 'react';
+import React, { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 import { AppBar } from '@bit-bazaar/shell-app.navigation.app-bar';
 import { Container } from '@bit-bazaar/design.layout.container';
@@ -14,6 +14,7 @@ export type MenuItemImport = {
 };
 
 const MenuFallback = ({ mfeName }: { mfeName: string }) => (
+  // @ts-ignore
   <Button to={mfeName.toLowerCase()} variant="text" sx={{ color: 'white' }}>
     {mfeName}
   </Button>

@@ -1,3 +1,4 @@
+import React from 'react';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import { ThemeProvider } from '@bit-bazaar/design.theme.theme-provider';
 import { AuthProvider } from '@bit-bazaar/shell-app.auth.auth-provider';
@@ -13,9 +14,9 @@ export function ShellApp() {
         <ThemeProvider>
           <Routes>
             <Route path="/" element={<Layout />}>
-              <Route path="/" element={<Homepage />} />
-              <Route path="/store/*" element={<Store />} />
-              <Route path="/blog/*" element={<Blog />} />
+              <Route index element={<Homepage />} />
+              <Route path="store/*" element={<Store />} />
+              <Route path="blog/*" element={<Blog />} />
               <Route path="*" element={<div>Not Found</div>} />
             </Route>
           </Routes>

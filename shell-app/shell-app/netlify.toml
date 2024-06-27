@@ -7,21 +7,3 @@
 	no-store,
 	must-revalidate'''
     Access-Control-Allow-Origin = "*"
-
-[[redirects]]
-  from = "/store/*.js"
-  to = "https://bit-bazaar-storefront.netlify.app/:splat"
-  force = true
-  status = 200
-
-[[redirects]]
-  from = "/blog/*.js"
-  to = "https://bit-bazaar-blog.netlify.app/:splat"
-  force = true
-  status = 200
-
-
-[[redirects]]
-  from = "*"
-  to = "/index.html"
-  status = 200
