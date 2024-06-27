@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { type ComponentType } from 'react';
 import { loadRemote } from '@module-federation/runtime';
 import { MfeMenu } from '@bit-bazaar/shell-app.navigation.mfe-menu';
 import type { MenuItemImport } from '../layout.js';
@@ -24,7 +24,7 @@ export const Blog = () => {
           throw new Error('blog module not found');
         }
 
-        return { default: m.default };
+        return { default: m.Blog as ComponentType<any> };
       })
       .catch((e) => {
         console.error(`Error loading blog module`, e);
